@@ -109,6 +109,19 @@ class mywindow(QtWidgets.QMainWindow):
         self.step = 0
     
     def gameLogic(self):
+
+        coordinate = (
+            (1,2,3), (6,4,5), (9,7,8), # X
+            (1,6,9), (2,4,7), (3,5,8), # Y
+            (1,4,8), (3,4,9),          # D
+            )
+        self.ui.pushButton_1.font.
+        vector = lambda item: [getattr(self.ui,'pushButton_%s'% x).text for x in item]
+        for item in coordinate:
+            if vector(item).count('X') == 3 or vector(item).count('O') == 3:
+                for i in item:
+                    self.buttons[i].color = color
+
         match self.step:
             case 1:
                 if self.buttonStatus_4:
